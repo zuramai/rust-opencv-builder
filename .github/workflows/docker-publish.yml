@@ -28,11 +28,13 @@ jobs:
             image: ghcr.io/${{ github.repository }}
           - dockerfile: ./Dockerfile.static
             image: ghcr.io/${{ github.repository }}-static
+          - dockerfile: ./Dockerfile.avx2
+            image: ghcr.io/${{ github.repository }}-avx2
     permissions:
       contents: read
       packages: write
       id-token: write
-      
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
