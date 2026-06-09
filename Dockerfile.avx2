@@ -64,7 +64,7 @@ RUN curl -LO https://github.com/opencv/opencv/archive/refs/tags/$OPENCV_VERSION.
   -D OPENCV_ENABLE_MEMALIGN=OFF \
   -D OPENCV_ENABLE_NONFREE=ON \
   -D OPENCV_FORCE_3RDPARTY_BUILD=ON \
-  -D OPENCV_GENERATE_PKGCONFIG=ON \
+  -D OPENCV_GENERATE_PKGCONFIG=OFF \
   -D PROTOBUF_UPDATE_FILES=OFF \
   -D WITH_1394=OFF \
   -D WITH_ADE=ON \
@@ -129,5 +129,3 @@ RUN curl -LO https://github.com/opencv/opencv/archive/refs/tags/$OPENCV_VERSION.
   && cd ../.. \
   && rm -rf opencv-$OPENCV_VERSION \
   && rm $OPENCV_VERSION.tar.gz
-
-ENV PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:${PKG_CONFIG_PATH}"
