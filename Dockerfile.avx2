@@ -3,7 +3,7 @@
 
 FROM rust:1.94.0-trixie
 
-ARG OPENCV_VERSION="4.9.0"
+ARG OPENCV_VERSION="4.12.0"
 ENV CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
 ENV OPENCV_LINK_LIBS="opencv_highgui,opencv_objdetect,opencv_dnn,opencv_calib3d,opencv_features2d,opencv_stitching,opencv_flann,opencv_videoio,opencv_video,opencv_ml,opencv_imgcodecs,opencv_imgproc,opencv_core,libtbb,liblibwebp,liblibtiff,liblibjpeg-turbo,liblibpng,liblibopenjp2,liblibprotobuf,libquirc,libzlib"
 
